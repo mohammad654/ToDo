@@ -65,6 +65,7 @@
         my_span.appendChild(br);
 
         }
+        input_text.value=" ";
     });
 
     // var myVar = setInterval(mo, 3000);
