@@ -59,9 +59,14 @@
         icon.appendChild(document.createTextNode(''));
         my_span.appendChild(icon);
         icon.className +="fas fa-times ";
+
             icon.addEventListener('click',()=>{
+                output.animate([
+                    { transform: 'translateY(0px)' },
+                    { transform: 'translateY(20px)' }
+                ], { duration: 1000},{delay:4});
                 my_span.parentNode.removeChild(my_span);
-            })
+            });
 
 
 
