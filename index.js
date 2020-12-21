@@ -15,11 +15,15 @@
 
     // Add action __________________________________________________
     button_item1.addEventListener('click',()=>{
-        if (input_text.value.length>15 || input_text.value.length==0){
-            alert("\"The field cannot be =>1 empty Or  =>2 Greater than  15 Letters  \" ");
+        if (input_text.value.length>15  ){
+            alert("\"The field cannot be  Greater than  15 Letters  \" ");
             input_text.value=" ";
 
-        }else {
+        }else if (input_text.value.length==''){
+            alert("\"The field cannot be  empty  \" ");
+            input_text.value=" ";
+        }
+        else {
 
             var  my_span  = document.createElement("span");
         output.appendChild(my_span);
@@ -29,7 +33,6 @@
         my_span.style.marginBottom='6px';
         my_span.style.fontSize='20px';
         my_span.style.cursor='';
-
 
         var  checkbox  = document.createElement("input");
              checkbox.type = 'checkbox';
@@ -51,18 +54,28 @@
         my_span.appendChild(label);
         var set_i=my_span.appendChild(label);
 
-        // localStorage.setItem('label', input_text.value);
-        // console.log( "local Storage  : " +localStorage.getItem("label"));
-
-
 
         var  icon  = document.createElement("I");
         icon.appendChild(document.createTextNode(''));
         my_span.appendChild(icon);
         icon.className +="fas fa-times ";
+            icon.addEventListener('click',()=>{
+                my_span.parentNode.removeChild(my_span);
+            })
 
-        var br = document.createElement('br');
+
+
+            var br = document.createElement('br');
         my_span.appendChild(br);
+
+
+            if (input_text.value==" "){
+                alert("\"The field cannot be  empty  888 \" ");
+                input_text.value=" ";
+                my_span.parentNode.removeChild(my_span);
+            }
+
+
 
         }
         input_text.value=" ";
