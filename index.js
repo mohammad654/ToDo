@@ -70,7 +70,7 @@
 
 
             if (input_text.value==" "){
-                alert("\"The field cannot be  empty  888 \" ");
+                alert("\"The field cannot be  empty   \" ");
                 input_text.value=" ";
                 my_span.parentNode.removeChild(my_span);
             }
